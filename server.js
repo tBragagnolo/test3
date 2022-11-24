@@ -19,17 +19,17 @@ app.get("/", (req, res)=>{
     res.render("home");
 });
 
-app.get("/CPA", (req, res)=>{
-    dat.cpa().then((data)=>{
-        res.json(data);
-    }).catch((mes)=>{
-        res.json({message: mes});
-    });
-});
-
 app.get("/BSD", (req, res)=>{
     dat.bsd().then((data)=>{
         res.render("students", {students: data})
+    }).catch((mes)=>{
+        res.json({"Message": mes});
+    });
+});
+
+app.get("/allStudents", (req, res)=>{
+    dat.allStudents().then((data)=>{
+        res.render("students", {students: data});
     }).catch((mes)=>{
         res.json({"Message": mes});
     });

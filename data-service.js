@@ -58,3 +58,10 @@ exports.highGPA = function highGPA(){
         else resolve(hStudent);
     });
 }
+
+exports.allStudents = function allStudents(){
+    return new Promise((resolve, reject)=>{
+        if(students.length == 0) reject("No Students");
+        else resolve(students);
+    });
+}
