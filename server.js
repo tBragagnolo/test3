@@ -11,7 +11,7 @@ function onStart(){
 app.get("/", (req, res)=>{
     var resText = "<h2>Declaration: </h2>";
     resText += "<p> The rest text is displayed in paragraph as shown in screenshot. </p>";
-    resText += " <p> I acknowledge the College’s academic integrity policy and my own integrity ";
+    resText += " <p> I acknowledge the College's academic integrity policy and my own integrity ";
     resText += "remain in effect whether my work is done remotely or onsite.";
     resText += " Any test or assignment is an act of trust between me and my instructor, ";
     resText += " and especially with my classmates even when no one is watching.";
