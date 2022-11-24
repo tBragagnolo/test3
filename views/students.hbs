@@ -1,4 +1,19 @@
 <h1>Student List</h1>
 <div>
-    
+    <table>
+        <tr>
+            <td><b>Student Id</b></td>
+            <td><b>Name</b></td>
+            <td><b>Program</b></td>
+            <td><b>GPA</b></td>
+        </tr>
+        {{#each data}}
+            <tr>
+                <td>{{stdId}}</td>
+                <td>{{name}}</td>
+                <td>{{program}}</td>
+                <td>{{gpa}}</td>
+            </tr>
+        {{/each}}
+    </table>
 </div>
