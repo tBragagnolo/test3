@@ -12,21 +12,6 @@ exports.prep = function prep(){
     });
 }
 
-exports.cpa = function cpa(){
-    return new Promise((resolve, reject)=>{
-        var cpaStudents = [];
-
-        for(var i = 0; i < students.length; i++){
-            if(students[i].program == "CPA"){
-                cpaStudents.push(students[i]);
-            }
-        }
-
-        if(cpaStudents.length == 0) reject("No CPA Students");
-        else resolve(cpaStudents);
-    });
-}
-
 exports.bsd = function bsd(){
     return new Promise((resolve, reject)=>{
         var bsdStudents = [];
