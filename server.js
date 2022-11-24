@@ -9,21 +9,14 @@ function onStart(){
     console.log("Express http server listening on", port);
 }
 
-app.get("/", (req, res)=>{
-    var resText = "<h2>Declaration: </h2>";
-    resText += "<p> The rest text is displayed in paragraph as shown in screenshot. </p>";
-    resText += " <p> I acknowledge the College's academic integrity policy and my own integrity ";
-    resText += "remain in effect whether my work is done remotely or onsite.";
-    resText += " Any test or assignment is an act of trust between me and my instructor, ";
-    resText += " and especially with my classmates even when no one is watching.";
-    resText += " I declare I will not break that trust. </p>";
-    resText += "<p>Name: <mark> <b> Tom Bragagnolo </b> </mark> </p>";
-    resText += "<p>Student Number: <mark><b> 139157218 </b> </mark> </p>";
-    
-    resText += `<p> <a href = "/BSD"> Click to visit BSD Students </a></p>
-                <p> <a href = "/highGPA"> Click to see who has the highest GPA </a></p>`;
+app.engine(".hbs", exphbs.engine({
+    extname: ".hbs",
+    defaultLayout: "main"
+}));
+app.set("view engine", ".hbs");
 
-    res.send(resText);
+app.get("/", (req, res)=>{
+    
 });
 
 app.get("/CPA", (req, res)=>{
