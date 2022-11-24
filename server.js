@@ -37,21 +37,7 @@ app.get("/BSD", (req, res)=>{
 
 app.get("/highGPA", (req, res)=>{
     dat.highGPA().then((data)=>{
-        var resText = "<h2>Highest GPA: </h2>";
-        resText += "<p>Student ID: ";
-        resText += data.studId;
-        resText += "</p>";
-        resText += "<p>Name: ";
-        resText += data.name;
-        resText += "</p>";
-        resText += "<p>Program: ";
-        resText += data.program;
-        resText += "</p>";
-        resText += "<p>GPA: ";
-        resText += data.gpa;
-        resText += "</p>";
-
-        res.send(resText);
+        res.render("student", {student: data});
     });
 });
 
