@@ -29,9 +29,9 @@ app.get("/CPA", (req, res)=>{
 
 app.get("/BSD", (req, res)=>{
     dat.bsd().then((data)=>{
-        res.json(data);
+        res.render("students", {students: data})
     }).catch((mes)=>{
-        res.json({message: mes});
+        res.json({"Message": mes});
     });
 });
 
