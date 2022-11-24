@@ -2,7 +2,7 @@ var express = require("express");
 var dat = require("./data-service");
 
 var app = express();
-var port = process.env.PORT || 8081;
+var port = process.env.PORT || 8080;
 
 function onStart(){
     console.log("Express http server listening on", port);
@@ -14,7 +14,7 @@ app.get("/", (req, res)=>{
     resText += " <p> I acknowledge the College’s academic integrity policy and my own integrity ";
     resText += "remain in effect whether my work is done remotely or onsite.";
     resText += " Any test or assignment is an act of trust between me and my instructor, ";
-    resText += " and especially with my classmates… even when no one is watching.";
+    resText += " and especially with my classmates even when no one is watching.";
     resText += " I declare I will not break that trust. </p>";
     resText += "<p>Name: <mark> <b> Tom Bragagnolo </b> </mark> </p>";
     resText += "<p>Student Number: <mark><b> 139157218 </b> </mark> </p>";
